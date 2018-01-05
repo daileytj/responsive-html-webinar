@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- meta tag for responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- meta tag as a workaround for Windows phone -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Responsive Html Email</title>
+    <style type='text/css'>
+      body{
+        padding:0;
+        margin:0;
+        font-family: sans-serif;
+      }
+      @media screen and (max-width:600px){
+      
+        table[class="responsive-table"]{
+          width:100% !important;
+          padding: 10px 5%;
+        }
+      
+        img[class="responsive-image"]{
+          max-width:100% !important;
+          height:auto !important;
+        }
+        
+        td[class="headline"]{
+          font-size:30px !important;
+          background: #222222;
+          color: #ffffff;
+          padding-bottom: 20px;
+        }
+        
+        table[class="responsive-table-2"]{
+          width:100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- full width container -->
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td align="center">
+          <!-- 600px container -->
+          <table class="responsive-table" width="600" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td>
+                <img class="responsive-image" src="http://via.placeholder.com/600x300" alt="placeholder image" width="600" height="300">
+              </td>
+            </tr>
+            <tr>
+              <td class="headline" align="center" style="font-size:40px; padding-top:20px">
+                I &hearts; Placeholder Photos!
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 0; font-size:20px;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table class="responsive-table-2" width="300" align="left" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td bgcolor="#dddddd" style="padding:15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                  </tr>
+                </table>
+                <table class="responsive-table-2" width="300" align="right" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td bgcolor="#aaaaaa" style="padding:15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<!-- Notes
+Litmus Responsive Email Webinar
+https://www.youtube.com/watch?v=urgD_dwm-0E&t=7s
+
+Fluid email: Full width of a single viewport/breakpoint.
+Adapctive email: Fixed widths at multiple viewports/breakpionts.
+Responsive email: Fluid widths at multiple viewports/breakpoints.
+
+Support at 320px(mobile), 768px(tablet), 1024px(desktop)
+
+Why is it important to be responsive?
+Mobile viewing is increasing and is now at about 50% or higher, and desktop is declining.
+
+emailclientmarketshare.com <client analytics
++15% increase in unique click rate for responsive email
+
+Responsive email is not supported everywhere!!
+About 47% of email clients support responsive email
+Responsive email works on an app-by-app basis, not by device.
+
+Gmail does not support responsive email :(
+
+Use media queries to detect screen size and alter content + layout
+Media queries are not supported everywhere
+
+Yahoo workaround using attribute selectors in CSS
+table[class="responsive-image"]{
+  width:100% !important;
+}
+use the !important tag to ovveride inline styles
+
+add specific meta tags for responsive email
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+and a meta tag as a workaround for Windows phone
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+
+Tools + Resources:
+http://litmus.com/blog/the-how-to-guide-to-responsive-email-design-infographic
+http://www.stampready.net, http://www.campaignmonitor.com/canvas <-drag and drop editor for html emails
+http://www.litmusbuilder.com <-email editor
+http://www.responsiveemailresources.com
+http://www.responsiveemailpatterns.com
+http://www.templates.mailchimp.com
+http://www.campaignmonitor.com/css
+http://www.litmus.com/community <-email design forum
+http://www.litmus.com/scope <-email code inspector
+http://www.litmus.com <-email code testing
+
+
+
+-->
